@@ -1,23 +1,3 @@
-install.packages("blogdown")
-
-library(blogdown)
-
-library(rmarkdown)
-install.packages("viridis")
-library("viridis")
-install.packages("extrafont")
-library(extrafont)
-install.packages("tidyverse")
-library(tidyverse)
-IndigenousDeaths <- read.csv('C:/Users/shara/OneDrive/Desktop/COMM2501 - R labs/R Blogdown csv file.csv')
-
-Disease_Name = c("Circulatory diseases", "Neoplasms", "External Causes", "Endocrine, Metabolic & Nutritional Disorders","Diabetes", "Respiratory Diseases", "Digestive Diseases", "Nervous System Diseases", "Infectious and Parasitic Diseases", "Kidney Diseases", "Conditions from Perinatal Period", "Other")
-
-Deaths_per_100000_persons = c(271.4,232.1,81.3,100.6,87.3,100.6,46,26.1,20.8,24,4.7,84.1)
-
-IndigenousDeathsData <- data.frame(Disease_Name,Deaths_per_100000_persons)
-
-
 my_ggplot <- ggplot(
   data=IndigenousDeathsData, aes(
   x=Disease_Name, y=Deaths_per_100000_persons, fill=Disease_Name) 
@@ -36,7 +16,7 @@ my_ggplot <- ggplot(
        axis.title.y = element_text(hjust=0.5, size = 14, margin=margin(t=0, r=20, b=0, l=0)),
        axis.title.x = element_text (hjust=0.5, size = 14),
        plot.title = element_text(hjust=0.5, size=25))
-my_ggplot
+
       
       
 
